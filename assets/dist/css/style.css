@@ -7,3 +7,32 @@
 .btn-grey{
     background-color: #e2e6ea;
 }
+
+#urunler td{
+    vertical-align: middle !important;
+}
+
+#footer a{
+    color:#6c757d !important;
+    text-decoration:none;
+}
+
+.mobilTopHeader{
+    display: none;
+}
+
+/* Mobil Css */
+
+@media (max-width:768px){
+    .mobilTopHeader{
+        display:flex;
+    }
+
+    .mobilTopHeader a{
+        color:#6c757d !important;
+    }
+
+    #menu .col-md-4{
+        display: none;
+    }
+}
