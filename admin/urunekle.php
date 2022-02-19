@@ -45,6 +45,13 @@
                         </div>
                     </div>
                 </div>
+                <div class="form-group">
+                    <label>Ürün Sınıflandırması Seçiniz</label> <br>
+                    <label for="yeni">Yeni Ürün</label> <input type="radio" name="siniflandirma" id="yeni" value="Yeni Ürün" class="mr-5">
+                    <label for="trend">Trend ürün</label> <input type="radio" name="siniflandirma" id="trend" value="Trend Ürün" class="mr-5">
+                    <label for="encok">En Çok Satılan</label> <input type="radio" name="siniflandirma" id="encok" value="En Çok Satılan" class="mr-5">
+                    <label for="onecikan">Öne Çıkan Ürün</label> <input type="radio" name="siniflandirma" id="onecikan" value="Öne Çıkan">
+                </div>
             </div>
             <div class="col-md-3">
                 <div class="form-group">
@@ -170,8 +177,8 @@
                         $altkategori = implode(',',$_POST['altkategori']);                      
 
                         if(isset($foto1) || isset($foto2) || isset($foto3) || isset($foto4)){
-                            $sorgu = $db -> prepare('insert into urunler(baslik,genelaciklama,stok,fiyat,indirim,kargo,anagorsel,galeri1,galeri2,galeri3,altetiketi,durum,anakategori,altkategori,meta) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
-                            $sorgu -> execute(array($_POST['baslik'],$_POST['genelaciklama'],$_POST['stok'],$_POST['fiyat'],$_POST['indirim'],$_POST['kargo'],$anagorsel,$galeri1,$galeri2,$galeri3,$_POST['altetiketi'],$_POST['durum'],$_POST['anakategori'],$altkategori,$_POST['meta']));
+                            $sorgu = $db -> prepare('insert into urunler(baslik,genelaciklama,stok,fiyat,indirim,kargo,siniflandirma,anagorsel,galeri1,galeri2,galeri3,altetiketi,durum,anakategori,altkategori,meta) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
+                            $sorgu -> execute(array($_POST['baslik'],$_POST['genelaciklama'],$_POST['stok'],$_POST['fiyat'],$_POST['indirim'],$_POST['kargo'],$_POST['siniflandirma'],$anagorsel,$galeri1,$galeri2,$galeri3,$_POST['altetiketi'],$_POST['durum'],$_POST['anakategori'],$altkategori,$_POST['meta']));
 
                             if($sorgu -> rowCount()){
                                 echo '<div class="alert alert-success">Ürün Kaydedildi</div>';

@@ -23,6 +23,7 @@
                             <th>ID</th>
                             <th>Görsel</th>
                             <th>Ürün Adı</th>
+                            <th>Etiket</th>
                             <th>Stok Adet</th>
                             <th>Fiyat</th>
                             <th>İndirim</th>
@@ -45,6 +46,7 @@
                                     <td><?php echo $satir['id']; ?></td>
                                     <td><img src="<?php echo $satir['anagorsel']; ?>" style="width:80px;"></td>
                                     <td><?php echo $satir['baslik']; ?></td>
+                                    <td><?php echo $satir['siniflandirma']; ?></td>
                                     <td><?php echo $satir['stok']; ?></td>
                                     <td><?php echo $satir['fiyat']; ?></td>
                                     <td><?php echo $satir['indirim']; ?></td>
